@@ -12,6 +12,10 @@
 		CC20FC812B5B113C002D20B4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC20FC802B5B113C002D20B4 /* Item.swift */; };
 		CC20FC832B5B113E002D20B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC20FC822B5B113E002D20B4 /* Assets.xcassets */; };
 		CC20FC862B5B113E002D20B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC20FC852B5B113E002D20B4 /* Preview Assets.xcassets */; };
+		CCA069372B5C688500848480 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA069362B5C688500848480 /* Launch Screen.storyboard */; };
+		CCA0693C2B5C78AD00848480 /* Notific.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA0693B2B5C78AD00848480 /* Notific.swift */; };
+		CCF909F22B5BEB3D000F3014 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = CCF909F12B5BEB3D000F3014 /* RevenueCat */; };
+		CCF909F42B5BEB3D000F3014 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = CCF909F32B5BEB3D000F3014 /* RevenueCatUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,8 @@
 		CC20FC852B5B113E002D20B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC20FC872B5B113E002D20B4 /* pomodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pomodoro.entitlements; sourceTree = "<group>"; };
 		CC20FC882B5B113E002D20B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA069362B5C688500848480 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CCA0693B2B5C78AD00848480 /* Notific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notific.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF909F42B5BEB3D000F3014 /* RevenueCatUI in Frameworks */,
+				CCF909F22B5BEB3D000F3014 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,8 @@
 				CC20FC872B5B113E002D20B4 /* pomodoro.entitlements */,
 				CC20FC882B5B113E002D20B4 /* Info.plist */,
 				CC20FC842B5B113E002D20B4 /* Preview Content */,
+				CCA069362B5C688500848480 /* Launch Screen.storyboard */,
+				CCA0693B2B5C78AD00848480 /* Notific.swift */,
 			);
 			path = pomodoro;
 			sourceTree = "<group>";
@@ -90,6 +100,10 @@
 			dependencies = (
 			);
 			name = pomodoro;
+			packageProductDependencies = (
+				CCF909F12B5BEB3D000F3014 /* RevenueCat */,
+				CCF909F32B5BEB3D000F3014 /* RevenueCatUI */,
+			);
 			productName = pomodoro;
 			productReference = CC20FC792B5B113C002D20B4 /* pomodoro.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +132,9 @@
 				Base,
 			);
 			mainGroup = CC20FC702B5B113C002D20B4;
+			packageReferences = (
+				CCF909F02B5BEB3D000F3014 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
 			productRefGroup = CC20FC7A2B5B113C002D20B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA069372B5C688500848480 /* Launch Screen.storyboard in Resources */,
 				CC20FC862B5B113E002D20B4 /* Preview Assets.xcassets in Resources */,
 				CC20FC832B5B113E002D20B4 /* Assets.xcassets in Resources */,
 			);
@@ -144,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA0693C2B5C78AD00848480 /* Notific.swift in Sources */,
 				CC20FC7F2B5B113C002D20B4 /* ContentView.swift in Sources */,
 				CC20FC812B5B113C002D20B4 /* Item.swift in Sources */,
 				CC20FC7D2B5B113C002D20B4 /* pomodoroApp.swift in Sources */,
@@ -356,6 +375,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCF909F02B5BEB3D000F3014 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.32.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCF909F12B5BEB3D000F3014 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCF909F02B5BEB3D000F3014 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		CCF909F32B5BEB3D000F3014 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCF909F02B5BEB3D000F3014 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC20FC712B5B113C002D20B4 /* Project object */;
 }

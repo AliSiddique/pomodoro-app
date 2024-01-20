@@ -14,12 +14,18 @@ struct ContentView: View {
 
     var body: some View {
         NavigationSplitView {
+                NavigationLink("Notifications") {
+                    Notific()
+                }
+            
             List {
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text(item.name)
                     } label: {
                         Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(item.name)
                     }
                 }
                 .onDelete(perform: deleteItems)
